@@ -34,7 +34,7 @@ npm install react-hook-form
 https://www.npmjs.com/package/tailwind-scrollbar
 npm install --save-dev tailwind-scrollbar
 
-# 8 - Content Management System - CMS
+# 8 - Content Management System - CMS - SANITY.io
 
 buh data-gaa garaaraa 1 burchlen HTML deeere oruulah shaardlagagvigeer
 sanity.io site-aas dynamic-aar update hiih.
@@ -49,6 +49,27 @@ https://www.sanity.io/manage
    ...Select project template? Blog(schema) songono.
    ...Do you want to use TypeScript? Yes no
    ...Package manager to use for installing dependencies? npm
+
+3. "sanity" nertei folder uusne. Local baidlaar schema-gaa uusgene.
+   https://www.sanity.io/docs/create-a-schema-and-configure-sanity-studio
+
+   /sanity/schemas/ folder dotor "pageInfo.js, social.js, skill.js geh met" gesen schema uusgeed, "index.js" dr ni importlow.
+
+4. terminal dr "cd sanity
+5. terminal dr npx sanity start
+6. http://localhost:3333 dr server luu orno.
+7. /sanity/schemas/ dotor uusgesen zagwar shig window ter 3333 url dr garch irne.
+8. data-gaa boglono. PUBLISH hiine.
+9. terminal dr /sanity folder dotroo "npx sanity deploy" hiine.
+10. https://nextjs-12-portfolio.sanity.studio/ url ogno.
+11. ene url-ruugaa orood menu dr "VISION" dr daraad
+12. \*[_type=='social'] {
+    ...
+    } gej biched FETCH dr darhad 'SOCIAL" heseg dr hsen data ni array baidlarr irne.
+13. .gitignore dr "sanity/node_modules" oruulna.
+14. npm install next-sanity @portabletext/react @sanity/image-url
+    https://github.com/sanity-io/next-sanity
+15. "sanity.ts "file uusgene.
 
 # 9 - Hydration ERROR fix
 
