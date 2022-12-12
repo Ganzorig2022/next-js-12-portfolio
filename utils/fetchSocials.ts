@@ -13,9 +13,10 @@ export const fetchSocials = async () => {
 
   const res = await sanityClient.fetch(query);
 
-  const data = await res.json();
+  // const data = await res.json();
 
-  const socials: Social[] = data.socials;
+  // const socials: Social[] = data.socials;
+  const socials: Social[] = res;
 
   return socials;
 };

@@ -14,9 +14,10 @@ export const fetchExperiences = async () => {
 
   const res = await sanityClient.fetch(query);
 
-  const data = await res.json();
+  // const data = await res.json();
 
-  const experiences: Experience[] = data.experiences;
+  // const experiences: Experience[] = data.experiences;
+  const experiences: Experience[] = res;
 
   return experiences;
 };

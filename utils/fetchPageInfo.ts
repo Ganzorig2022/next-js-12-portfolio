@@ -11,9 +11,10 @@ export const fetchPageInfo = async () => {
   //   `${process.env.NEXT_PUBLIC_SANITY_BASE_URL}/api/getPageInfo`
   // );
   const res = await sanityClient.fetch(query);
-  const data = await res.json();
+  // const data = await res.json();
 
-  const pageInfo: PageInfo = data.pageInfo;
+  // const pageInfo: PageInfo = data.pageInfo;
+  const pageInfo: PageInfo = res;
 
   return pageInfo;
 };

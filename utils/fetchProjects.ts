@@ -14,9 +14,10 @@ export const fetchProjects = async () => {
   // );
   const res = await sanityClient.fetch(query);
 
-  const data = await res.json();
+  // const data = await res.json();
 
-  const projects: Project[] = data.projects;
+  // const projects: Project[] = data.projects;
+  const projects: Project[] = res;
 
   return projects;
 };
