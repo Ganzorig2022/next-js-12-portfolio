@@ -81,6 +81,8 @@ https://stackoverflow.com/questions/71706064/react-18-hydration-failed-because-t
 
 # 10 - Deploy to VERCEL
 
+.env file-aa vercel dr oruulj ogno.
+
 https://vercel.com/docs/cli/deploying-from-cli
 
 1. npm i -g vercel
