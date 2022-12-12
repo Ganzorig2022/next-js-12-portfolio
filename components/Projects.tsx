@@ -1,10 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Project } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {};
+type Props = {
+  projects: Project[];
+};
 
-export default function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+export default function Projects({ projects }: Props) {
+  // console.log(urlFor(projects[0].technologies[2].image).url());
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -33,7 +37,7 @@ export default function Projects({}: Props) {
               }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              src='https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+              src={urlFor(project?.image).url()}
               alt=''
               className='rounded-xl w-[400px] h-[200px] object-cover'
             />
@@ -42,13 +46,22 @@ export default function Projects({}: Props) {
                 <span className='underline decoration-[#F7AB0A]/50'>
                   Case study {i + 1} of {projects.length}:{' '}
                 </span>
-                Spotify clone
+                {project.title}
               </h4>
+
+              <div className='flex items-center space-x-2 justify-center'>
+                {/* {project?.technologies.map((technology) => (
+                  <img
+                    key={technology._id}
+                    className='h-10 w-10 rounded-full bg-white'
+                    src={urlFor(technology.image).url()}
+                    alt='Technology image'
+                  />
+                ))} */}
+              </div>
+
               <p className='text-lg text-center md:text-left'>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate non ratione minima numquam aspernatur magni dolorem
-                ipsam, laboriosam et alias sequi ipsa exercitationem deserunt ab
-                nam repudiandae tenetur vero fuga.
+                {project?.summary}
               </p>
             </div>
           </div>

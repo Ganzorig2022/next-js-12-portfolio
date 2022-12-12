@@ -1,10 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { motion } from 'framer-motion';
+import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-export default function About({}: Props) {
+export default function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -28,7 +32,7 @@ export default function About({}: Props) {
         transition={{
           duration: 1.2,
         }}
-        src='https://firebasestorage.googleapis.com/v0/b/petworldpinecone.appspot.com/o/me.jpg?alt=media&token=1b82e3bf-656b-466a-a93c-a0cf17a70d26'
+        src={urlFor(pageInfo?.profilePic).url()}
         alt=''
         className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:h-95 md:w-64 xl:w-[500px] xl:h-[600px]'
       />
@@ -38,12 +42,7 @@ export default function About({}: Props) {
           <span className='underline decoration-[#F7AB0A]/50'>little</span>{' '}
           background
         </h4>
-        <p className='text-sm'>
-          I'm Ganzorig. I have started my coding journey in February 2022 since
-          i retired from my former career which was geologist since 2010. During
-          my free time, i tend to develop my coding skills and also soft skills
-          as much as i could.
-        </p>
+        <p className='text-sm'>{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );

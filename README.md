@@ -65,12 +65,29 @@ https://www.sanity.io/manage
 11. ene url-ruugaa orood menu dr "VISION" dr daraad
 12. \*[_type=='social'] {
     ...
-    } gej biched FETCH dr darhad 'SOCIAL" heseg dr hsen data ni array baidlarr irne.
+    } gej biched FETCH dr darhad 'SOCIAL" heseg dr hsen data ni array baidlaar irne.
 13. .gitignore dr "sanity/node_modules" oruulna.
 14. npm install next-sanity @portabletext/react @sanity/image-url
     https://github.com/sanity-io/next-sanity
 15. "sanity.ts "file uusgene.
+16. getSocials.ts file uusgene.
+17. "typings.d.ts" file uusgeed bvh torlvvdee zaana.
+18. localhost:3000/api/getSocials gehed response irne.
+19. api/-aas front end taldaa "page/index.ts dr getStaticProps-oor awna.
 
 # 9 - Hydration ERROR fix
 
 https://stackoverflow.com/questions/71706064/react-18-hydration-failed-because-the-initial-ui-does-not-match-what-was-render
+
+# 10 - Deploy to VERCEL
+
+https://vercel.com/docs/cli/deploying-from-cli
+
+1. npm i -g vercel
+
+2. vercel build
+
+tegd heden songoltuudiig default-aar ni songono.
+ERROR-uudiig yanzlana.
+
+3. vercel deploy --prebuilt
