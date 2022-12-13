@@ -25,63 +25,67 @@ export default function ContactMe({}: Props) {
         Contact
       </h3>
       <div className='flex flex-col space-y-10 mt-12 absolute top-24'>
-        <h4 className='text-4xl font-semibold text-center'>
+        <h4 className='text-xl sm:text-2xl md:text-4xl lg:text-4xl font-semibold text-center'>
           I have got what you need.{' '}
           <span className='decoration-[#F7AB0a]/50 underline'>
             {`Let's talk`}
           </span>
         </h4>
 
-        <div className='space-y-10'>
-          <div className='flex items-center space-x-5 justify-center'>
+        <div className='sm:space-y-4 '>
+          <div className='flex items-center space-x-5 justify-center xs:w-90'>
             <PhoneIcon className='text-[#f7ab0a]/50 h-7 w-7 animate-pulse' />
-            <p className='text-2xl'>976-99022052</p>
+            <p className='text-xl sm:text-2xl md:text-2xl lg:text-2xl'>
+              976-99022052
+            </p>
           </div>
-          <div className='flex items-center space-x-5 justify-center'>
+          <div className='flex items-center space-x-5 justify-center overflow-hidden'>
             <MapPinIcon className='text-[#f7ab0a]/50 h-7 w-7 animate-pulse' />
-            <p className='text-2xl'>
+            <p className='xs:text-md sm:text-2xl md:text-2xl lg:text-2xl '>
               Bayangol district, Tsoglog apartment #202
             </p>
           </div>
           <div className='flex items-center space-x-5 justify-center'>
             <EnvelopeIcon className='text-[#f7ab0a]/50 h-7 w-7 animate-pulse' />
-            <p className='text-2xl'>ganzo.galaxy@gmail.com</p>
+            <p className='xs:text-md sm:text-2xl md:text-2xl lg:text-2xl'>
+              ganzo.galaxy@gmail.com
+            </p>
           </div>
         </div>
 
         {/* FORM HANDLER */}
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className='flex flex-col space-y-2 w-fit mx-auto'
+          className='flex flex-col space-y-2 mx-auto w-fit'
         >
-          <div className='flex space-x-2'>
+          <div className='flex contactForm sm:space-x-2  '>
             <input
               {...register('name')}
               type='text'
-              className='outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#f7ab0a]/40 focus:text-[#f7ab0a]/40 hover:border-[#f7ab0a]'
+              className='contactInput padding_8px-16px'
               placeholder='Name'
             />
             <input
               {...register('email')}
               type='email'
-              className='contactInput'
+              className='contactInput contactForm_8px padding_8px-16px'
               placeholder='Email'
             />
           </div>
           <input
             {...register('subject')}
             type='text'
-            className='contactInput'
+            className='contactInput padding_8px-16px'
             placeholder='Subject'
           />
           <textarea
             placeholder='Message'
             {...register('message')}
-            className='contactInput'
+            className='contactInput padding_8px-16px'
           />
           <button
             type='submit'
-            className='bg-[#f7ab0a] py-5 px-10 rounded-md text-black font-bold text-lg'
+            className='bg-[#f7ab0a] md:py-5 px-10 rounded-md text-black font-bold sm:text-lg'
           >
             Submit
           </button>

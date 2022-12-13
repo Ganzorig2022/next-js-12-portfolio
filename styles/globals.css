@@ -9,6 +9,18 @@
   }
 
   .contactInput {
-    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#f7ab0a]/40 focus:text-[#f7ab0a]/40 hover:border-[#f7ab0a];
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 text-sm md:text-base placeholder-gray-500 transition-all focus:border-[#f7ab0a]/40 focus:text-[#f7ab0a]/40 hover:border-[#f7ab0a];
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contactForm {
+    flex-direction: column;
+  }
+  .contactForm_8px {
+    margin-top: 8px;
+  }
+  .padding_8px-16px {
+    padding: 8px 16px;
   }
 }
