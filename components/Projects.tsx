@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function Projects({ projects }: Props) {
-  // console.log(urlFor(projects[0].technologies[2].image).url());
+  console.log(urlFor(projects[0].technologies[2].image).url());
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -50,14 +50,14 @@ export default function Projects({ projects }: Props) {
               </h4>
 
               <div className='flex items-center space-x-2 justify-center'>
-                {project?.technologies.map((technology) => (
+                {/* {project.technologies.map((technology) => (
                   <img
                     key={technology._id}
                     className='h-10 w-10 rounded-full bg-white'
-                    src={urlFor(technology.image).url()}
+                    src={urlFor(technology?.image).url()}
                     alt='Technology image'
                   />
-                ))}
+                ))} */}
               </div>
 
               <p className='text-lg text-center md:text-left'>
