@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function Projects({ projects }: Props) {
-  console.log(urlFor(projects[0].technologies[2].image).url());
+  // console.log(urlFor(projects[0].technologies[2].image).url());
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,7 +23,7 @@ export default function Projects({ projects }: Props) {
       </h3>
 
       {/* SCROLLABLE CARDS */}
-      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80'>
+      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80 mt-10'>
         {/* Projects */}
         {projects.map((project, i) => (
           <div
@@ -54,7 +54,7 @@ export default function Projects({ projects }: Props) {
                   <img
                     key={technology._id}
                     className='h-10 w-10 rounded-full bg-white'
-                    src={urlFor(technology?.image).url()}
+                    src={urlFor(technology.image).url()}
                     alt='Technology image'
                   />
                 ))} */}
